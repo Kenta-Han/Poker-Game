@@ -9,6 +9,7 @@ Poker = Poker()
 
 # 初回の手札表示
 print(Poker.gethand())
+print(Poker.printhand())
 
 # 繰り返し処理(５回)
 c_card = []

@@ -7,6 +7,10 @@ def tactics(hand,times):
     # 変更するカード番号を返す
 
     # ダミープログラム（奇数回は奇数番，偶数回は偶数番を変更）
+    for i in range(len(hand)):
+        # hand[i].num = 1
+        print(hand[i].suit + str(hand[i].num))
+
     if (times % 2) == 0:
         return [0,2,4]
     else:

@@ -2,12 +2,15 @@
 # poker用のclass
 import random
 
-class Poker:
-    # デッキ用リスト
-    __deck=[]
-    # 手札用リスト
-    __hand=[]
+class Card:
+    def __init__(self,s,n):
+        self.suit = s
+        self.num = n
 
+    def disp(self):
+        return self.suit + str(self.num)
+
+class Poker:
     # コンストラクタ
     def __init__(self):
         list_word = ["s","h","d","c"]
@@ -16,7 +19,7 @@ class Poker:
         card_list = []
         for i in list_word:
             for j in list_num:
-                card_list.append([i,j])
+                card_list.append(Card[i,j])
 
         # カードをシャッフル
         card_list = random.sample(card_list,len(card_list))
@@ -31,10 +34,7 @@ class Poker:
 
     # 綺麗に表示
     def printhand(self):
-        card  = []
-        for i in self.__hand:
-            card.append(i[0]+str(i[1]))
-        return card
+        return list(map(lambda x:str(x.disp()),self.__hand))
 
     # 手札入れ替え
     # 指定された引数をデック先頭と入れ替え，デックからpop
