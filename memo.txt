@@ -1,0 +1,34 @@
+
+Tactics
+
+# -*- coding: utf-8 -*-
+import collections
+
+def tactics(hand,times):
+    # 手札と回数から何を変更するべきか決定するプログラムメソッド（これを作成する）
+    # hand = 手札
+    # times = 回数
+    # 変更するカード番号を返す
+
+    num_list = []
+    # ダミープログラム（奇数回は奇数番，偶数回は偶数番を変更）
+    for i in range(len(hand)):
+        # hand[i].num = 1
+        print(hand[i].suit + str(hand[i].num))
+        num_list.append(hand[i].num)
+
+    # 出現個数を数える
+    count_dict = collections.Counter(num_list)
+    # リスト
+    print('出現個数：' + str(count_dict.most_common()))
+
+    result_list = []
+    for i in range(len(count_dict.most_common())):
+        if count_dict.most_common()[i][1] != 1 :
+        else :
+            return [0,1,2,3,4]
+    #
+    # if (times % 2) == 0:
+    #     return [0,2,4]
+    # else:
+    #     return [1,3]

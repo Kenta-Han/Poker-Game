@@ -8,12 +8,12 @@ from Tactics import tactics
 Poker = Poker()
 
 # 初回の手札表示
-print(Poker.gethand())
+print(Poker.printhand())
 
 # 繰り返し処理(５回)
 c_card = []
 for count in range(5):
-    print('{}回目の手札交換を行います．\n"c"を入力してください'.format(count+1))
+    print('\n{}回目の手札交換を行います．\n"c"を入力してください：'.format(count+1))
     x = input()
 
     # 手札交換
